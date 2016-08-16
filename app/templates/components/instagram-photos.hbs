@@ -1,0 +1,13 @@
+{{#paper-content}}
+  <div class="layout-row">
+    <div class="layout-column insta-content">
+      {{#each content key="stdResImg" as |instaPhoto|}}
+      <a href="{{instaPhoto.instagramLink}}" target="_blank">
+        {{#paper-card class="insta--card" as |card|}}
+          {{card.image src=instaPhoto.stdResImg alt="" title=""}}
+        {{/paper-card}}
+      </a>
+      {{/each}}
+    </div>
+  </div>
+{{/paper-content}}

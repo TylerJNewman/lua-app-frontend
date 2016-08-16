@@ -1,0 +1,171 @@
+$primary: "grey" !default;
+$accent: "pink" !default;
+$warn: "red" !default;
+$background: "grey" !default;
+$link: "light-blue" !default;
+
+$dark: false !default;
+$default-color: '500' !default;
+
+$foreground: "foreground-dark" !default;
+
+$base-background-color: white !default;
+$base-color: rgba(0, 0, 0, 0.87) !default;
+
+@import 'ember-paper';
+
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+body > .ember-view {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.bewteen {
+  justify-content: space-between;
+}
+
+
+.ember-app {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+md-content.md-default-theme, md-content {
+  background-color: #fafafa;
+}
+
+md-icon.paper-icon.md-font.material-icons {
+  margin-bottom: 2px;
+}
+
+.layout, .layout-column, .layout-row {
+  justify-content: center;
+}
+
+.header-list {
+  justify-content: flex-left;
+}
+
+.equilateral{ /* (left + right) * .866 */
+  border-top:20px solid #000;
+  border-right:11.55px solid transparent;
+  border-left:11.55px solid transparent;
+  margin: 2px;
+  color:  rgba(0, 0, 0, 0.87);
+}
+
+.brand {
+  margin: 2px;
+  padding: 2px;
+}
+
+.logo{
+  letter-spacing: .24em;
+}
+
+.first-item {
+  margin: -4px;
+}
+
+.toolbar-block--inner {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  align-items: center;
+  justify-content: space-around;;
+}
+
+.menu-links {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-links :first-child {
+    margin-left: 128px;
+}
+
+.menu-links :last-child {
+    margin-right: 128px;
+}
+
+.menu-links a {
+    margin-right: 24px;
+    letter-spacing: .05em;
+    font-size: 16px;
+}
+
+a:not(.btn):not(.btn-large):not(.btn-floating) {
+    color: #0d0e0e;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+a:not(.btn):not(.btn-large):not(.btn-floating):hover {
+    color: #969c9c;
+}
+
+md-toolbar {
+  background-color: white! important;
+}
+
+.instagram--list-item {
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  md-card.insta--card {
+    margin-top: 60px;
+  }
+}
+
+
+@media (max-width: 735px) {
+  md-card.insta--card {
+    margin-top: 0px;
+  }
+
+  .insta-content :first-child md-card {
+    margin-top: 8px;
+  }
+}
+
+// .active {
+//   background-color: #C5CAE9;
+// }
+//
+// .home-card {
+//   max-height:400px;
+//   max-width:400px;
+//   float: left;
+//   margin-left: 20px;
+//   .md-toolbar-tools {
+//     background-color: #E91E63;
+//   }
+//   p {
+//     overflow: hidden;
+//     display: -webkit-box;
+//     -webkit-line-clamp: 3;
+//     -webkit-box-orient: vertical;
+//   }
+// }

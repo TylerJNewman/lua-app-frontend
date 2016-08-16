@@ -1,0 +1,31 @@
+{{#paper-toolbar tall=true as |toolbar|}}
+  {{#toolbar.tools}}
+    {{#link-to "index"}}
+      {{paper-icon "menu" size=24}}
+    {{/link-to}}
+
+    <span class='flex'></span>
+    <span class="logo">
+      {{#link-to "index"}}<strong>LUA</strong>{{/link-to}}
+    </span>
+    <span class='flex'></span>
+    {{#link-to "index"}}
+      {{paper-icon "mail outline" size=24}}
+    {{/link-to}}
+
+  {{/toolbar.tools}}
+
+  <span class="flex"></span>
+
+  <span class="toolbar-block">
+    {{#toolbar.tools class="header-list toolbar-block--inner"}}
+      <span class='menu-links'>
+        {{#link-to "index"}}Story{{/link-to}}
+        {{#link-to "index"}}Blog{{/link-to}}
+        {{#link-to "index"}}Portfolio{{/link-to}}
+        {{#link-to "instagram"}}IG{{/link-to}}
+        {{#link-to "index"}}Collabs{{/link-to}}
+      </span>
+    {{/toolbar.tools}}
+  </span>
+{{/paper-toolbar}}
