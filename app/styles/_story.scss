@@ -9,9 +9,9 @@ $content-offset: 40vh;
 $transition-speed: 1.2s;
 $slide-number: 3;
 
-html, body {
-  overflow: hidden;
-}
+// html, body {
+//   overflow: hidden;
+// }
 
 .parallax-scroll--container {
   width: 100%;
@@ -42,7 +42,7 @@ html, body {
   height: 100vh + $parallax-offset;
   position: fixed;
   width: 100%;
-  top: 128px;
+  top: 0px;
   transform: translateY($parallax-offset);
   @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
   &:before {
@@ -60,6 +60,7 @@ html, body {
     background-image: url(http://s8.postimg.org/lf2udl5np/4_Aihmii.jpg);
     transform: translateY(-$parallax-offset / 2);
     .content-wrapper {
+      margin-top: 160px;
       transform: translateY($parallax-offset /2);
     }
   }
@@ -123,4 +124,12 @@ html, body {
         transform: translateY($parallax-offset / 2);
       }
   }
+}
+
+md-toolbar.hide-toolbar {
+  margin-top: -128px;
+}
+
+md-toolbar.md-default-theme.md-tall {
+  @include transition($transition-speed, margin, cubic-bezier(0.22, 0.44, 0, 1));
 }
