@@ -13,6 +13,7 @@ $base-background-color: white !default;
 $base-color: rgba(0, 0, 0, 0.87) !default;
 
 @import 'ember-paper';
+@import 'story';
 
 body {
   display: flex;
@@ -44,6 +45,10 @@ body > .ember-view {
 
 md-content.md-default-theme, md-content {
   background-color: #fafafa;
+}
+
+md-toolbar.md-default-theme.md-tall {
+  z-index: 100;
 }
 
 md-icon.paper-icon.md-font.material-icons {
