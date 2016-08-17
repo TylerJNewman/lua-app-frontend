@@ -64,7 +64,8 @@ export default Ember.Component.extend({
 
     // ------------- ADD EVENT LISTENER ------------- //
     var mousewheelEvent = isFirefox ? 'DOMMouseScroll' : 'wheel';
-    window.addEventListener(mousewheelEvent, parallaxScroll, false);
+    this._onScroll = parallaxScroll.bind(this);
+    window.addEventListener(mousewheelEvent, this._onScroll, false);
 
     // ------------- SLIDE MOTION ------------- //
     function nextItem() {
@@ -83,4 +84,11 @@ export default Ember.Component.extend({
       }
     }
   },
+
+  didDestroyElement() {
+    this._super(...arguments);
+    var mousewheelEvent = isFirefox ? 'DOMMouseScroll' : 'wheel';
+    window.removeEventListener(this._onScroll, false);
+  },
+
 });
