@@ -15,6 +15,12 @@ var delta;
 
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
+  Ember.run.throttle(this, throttleScroll, evt, 120)
+}
+
+function throttleScroll(evt) {
+
+  console.log('scroll');
   if (isFirefox) {
     //Set delta for Firefox
     delta = evt.detail * (-120);
