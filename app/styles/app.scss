@@ -130,10 +130,6 @@ md-toolbar {
   background-color: white! important;
 }
 
-.instagram--list-item {
-  list-style: none;
-}
-
 @media (min-width: 640px) {
   md-card.insta--card {
     margin-top: 60px;
@@ -143,13 +139,21 @@ md-toolbar {
 
 @media (max-width: 735px) {
   md-card.insta--card {
+    margin: 11px;
     margin-top: 0px;
   }
 
   .insta-content :first-child md-card {
-    margin-top: 8px;
+    margin-top: 0px;
   }
 }
+
+@media (max-width: 568px) {
+  .insta--container {
+    border: 15px solid #fff;
+  }
+}
+
 
 // .active {
 //   background-color: #C5CAE9;
