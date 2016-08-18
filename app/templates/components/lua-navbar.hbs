@@ -1,8 +1,16 @@
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick={{action "closeNav"}}>&times;</a>
+  <div class="overlay-content">
+    <a href="#">Home</a>
+    <a href="#">Story</a>
+    <a href="#">Blog</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
 {{#paper-toolbar tall=true as |toolbar|}}
   {{#toolbar.tools}}
-    {{#link-to "index"}}
-      {{paper-icon "menu" size=24}}
-    {{/link-to}}
+    <span style="font-size:30px;cursor:pointer" onclick={{action "openNav"}}>{{paper-icon "menu" size=24}}</span>
 
     <span class='flex'></span>
     <span class="logo">

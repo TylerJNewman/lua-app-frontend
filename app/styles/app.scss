@@ -13,6 +13,7 @@ $base-background-color: white !default;
 $base-color: rgba(0, 0, 0, 0.87) !default;
 
 @import 'ember-paper';
+@import 'overlay.scss';
 
 body {
   display: flex;
