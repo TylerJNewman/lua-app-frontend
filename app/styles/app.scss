@@ -14,6 +14,7 @@ $base-color: rgba(0, 0, 0, 0.87) !default;
 
 @import 'ember-paper';
 @import 'overlay.scss';
+@import 'contact.scss';
 
 body {
   display: flex;
@@ -152,6 +153,16 @@ md-toolbar {
   .insta--container {
     border: 15px solid #fff;
   }
+}
+
+@media (max-width: 568px) {
+  .content--container {
+    border: 15px solid #fff;
+  }
+}
+
+.content--container {
+    border: 30px solid #fff! important;
 }
 
 

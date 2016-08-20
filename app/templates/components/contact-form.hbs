@@ -1,0 +1,25 @@
+{{#unless submitted}}
+  {{#paper-form as |form|}}
+    {{#paper-content class="md-padding contact-form--container"}}
+    <h1>Contact Me</h1>
+    <div layout="" layout-sm="column">
+      {{form.input flex=50 label="Name" value=name onChange=(action (mut name))}}
+      {{form.input flex=50 label="E-mail" type="email" value=email onChange=(action (mut email))
+      required=required
+      errorMessages=(hash
+       required="How can I reach you?"
+       )}}
+    </div>
+    {{form.input textarea=true block=true label="Message" passThru=(hash rows=5)
+      value=message onChange=(action (mut message)) required=required
+      errorMessages=(hash
+       required="Whoops, forgot to write a message"
+       )}}
+    {{#paper-button class="contact-form--submit" disabled=form.isInvalid onClick=(action "submit") raised=true}}Submit{{/paper-button}}
+    {{/paper-content}}
+  {{/paper-form}}
+{{else}}
+    {{#paper-content}}
+  Thank you for contacting me.
+    {{/paper-content}}
+{{/unless}}
