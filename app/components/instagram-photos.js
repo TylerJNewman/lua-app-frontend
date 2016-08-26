@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   },
 
   content: [],
-  ACCESS_TOKEN: '15671865.1677ed0.709bceedd7344b9da31d9e91ba1fd7f9',
+  ACCESS_TOKEN: '15671865.6a85f49.89261ca759f9443e9465ea08de9483ec',
   user: 'self',
 
   requestURL: Ember.computed('ACCESS_TOKEN', function () {
@@ -29,6 +29,7 @@ export default Ember.Component.extend({
           var instaPhotos = data.data;
           instaPhotos.forEach(function (photo, index) {
               if (index >= 20) return;
+              debugger;
               result.pushObject({
                   stdResImg: photo.images.standard_resolution.url,
                   instagramLink: photo.link,

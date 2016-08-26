@@ -3,9 +3,7 @@
     <div class="layout-column insta-content">
       {{#each content key="stdResImg" as |instaPhoto|}}
       <a href="{{instaPhoto.instagramLink}}" target="_blank">
-        {{#paper-card class="insta--card" as |card|}}
-          {{card.image src=instaPhoto.stdResImg alt="" title=""}}
-        {{/paper-card}}
+          <img src={{instaPhoto.stdResImg}} class="instaphoto" alt="" title="">
       </a>
       {{/each}}
     </div>
